@@ -2,13 +2,13 @@ import React from 'react';
 import { 
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
  } from 'react-router-dom';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './views/Home'
 import About from './views/About'
+import Product from './views/Product'
 
 function App() {
   return (
@@ -22,6 +22,9 @@ function App() {
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/product/:id">
+              <Product />
             </Route>
           </Switch>
         </div>
