@@ -4,6 +4,30 @@
 
 @tailwind utilities;
 
+.cartContainer {
+  position: fixed;
+  bottom: 2%;
+  right: 5%;
+  font-size: 20px;
+  padding: 8px 12px;
+  margin: 0px;
+  z-index: 99;
+  background-color: #fff;
+}
+
+.cartContainer span {
+  position: absolute;
+  top: -7px;
+  right: 2px;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.cartContainer svg {
+  margin: 0px;
+}
+
 .loader {
   border: 5px solid #f3f3f3;
   border-radius: 50%;

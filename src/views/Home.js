@@ -3,7 +3,7 @@ import Loader from '../components/Loader'
 import ProductCard from '../components/ProductCard'
 import { useAxiosGet } from '../Hooks/HttpRequests'
 
-function Home () {
+function Home (props) {
   const url = `https://5ed45e9bfffad10016056ce0.mockapi.io/api/v2/posts?page=1&limit=10`
 
   let products = useAxiosGet(url)
@@ -21,7 +21,7 @@ function Home () {
   if(products.data) {
     content = 
       products.data.map((product) => 
-        <ProductCard key={product.id} product={product}/>
+        <ProductCard key={product.id} product={product} addToCart={props.addToCart} />
       )
   }
   return (

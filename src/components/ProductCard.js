@@ -23,12 +23,20 @@ function ProductCard(props) {
         <div className="mb-3">
           {props.product.description}
         </div>
-        <Link 
-          to={`/product/${props.product.id}`}
-          className="bg-blue-500 text-white p-2 flex justify-center"
-          >
-          View
-        </Link>
+        <div className="p-2 flex justify-between items-center">
+          <button 
+            className="bg-blue-500 text-white p-2 w-full text-center m-3"
+            onClick={() => props.addToCart(props.product)}
+            >
+            Add to Cart
+          </button>
+          <Link 
+            to={`/product/${props.product.id}`}
+            className="bg-blue-500 text-white p-2 w-full text-center m-3"
+            >
+            View
+          </Link>
+        </div>
       </div>
     </div>
   )
